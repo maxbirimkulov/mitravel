@@ -1,0 +1,39 @@
+@import "../libs/font-awesome/fontawesome.min.css";
+@import "../libs/owl-carousel/owl.carousel.min.css";
+@import "../libs/owl-carousel/owl.theme.default.min.css";
+@import "../css/jquery.fancybox.min.css";
+@import "../fonts/sfProDisplay/stylesheet.css";
+@import "../fonts/sfCompactText/style.css";
+
+
+@import "button";
+@import "header";
+@import "first-screen";
+@import "photo";
+@import "featured";
+@import "video";
+@import "sign-up";
+@import "inspirations";
+@import "footer";
+@import "back__top";
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container{
+  max-width: 1566px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+:root{
+  --sfPro : SFProDisplay, sans-serif;
+  --sfCompact :SFCompactTextLight,sans-serif ;
+}
+
+@import "media";

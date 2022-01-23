@@ -1,0 +1,95 @@
+@mixin burger ($top){
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 2px;
+  background-color: white;
+  top: $top;
+  left: 0;
+}
+.header{
+    width: 100%;
+  position: absolute;
+  padding-top: 53px ;
+  color: #FFFFFF;
+  z-index: 1;
+  &__link{
+    color: white;
+    text-decoration: none;
+    &:hover{
+      color: red;
+    }
+  }
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &__title{
+      font-family:var(--sfPro);
+      font-size: 22px;
+      line-height: 26px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+    }
+    &__icon{
+      width: 71px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__burger{
+      position: relative;
+      width: 48px;
+      height: 10px;
+      cursor: pointer;
+      &:before{
+     @include burger(0)
+      } &:after{
+       @include burger(8px)
+      }
+    }
+    &__burger.active{
+      &:before{
+        @include burger(8px);
+        transform: rotate(-45deg);
+      } &:after{
+          @include burger(8px);
+                transform: rotate(45deg);
+        }
+    }
+    &__menu{
+     display: none;
+    }
+    &__link{
+      font-size: 24px;
+      & a{
+        color: white;
+        text-decoration: none;
+        &:hover{
+          color: red;
+        }
+      }
+      &-icons{
+        display: none;
+      }
+    }
+    &__menu.active{
+      height: 340px;
+      width: 220px;
+      background-color: #3b599850 ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      list-style-type: none;
+      row-gap: 15px;
+      position: absolute;
+      right: 0;
+      top: 53px;
+      border-radius: 8px;
+    }
+  }
+
+}

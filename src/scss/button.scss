@@ -1,0 +1,35 @@
+@mixin smallButton($bg){
+  width: 132px;
+  height: 48px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+  font-family: var(--sfPro);
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  background-color: $bg;
+}
+@mixin bigButton($wd, $ht, $bg){
+  font-family: var(--sfPro);
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2.18182px;
+  color: #FFFFFF;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: $wd;
+  height: $ht;
+  background-color: $bg;
+}

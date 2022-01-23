@@ -1,0 +1,139 @@
+.first-screen{
+  padding-top: 219px;
+  background: #E3E3E3 url("../image/first-screen/1 5.png") center/cover no-repeat;
+  position: relative;
+  &__smallBtn{
+    margin-bottom: 40px;
+    @include smallButton(#1C2E3D40);
+  }
+  &__title{
+    font-family: var(--sfPro);
+    font-size: 80px;
+    line-height: 84px;
+    color: #FFFFFF;
+    margin-bottom:40px;
+  }
+  &__subtitle{
+    font-family: var(--sfCompact);
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    margin-bottom: 59px;
+    width: 501px;
+  }
+  &__bigBtn{
+    @include bigButton(274px, 80px, #E8594E);
+  }
+  &__search{
+    display: flex;
+    width: 100%;
+    margin-top: 156px;
+
+  }
+  &__form{
+    width: 1066px;
+    position: relative;
+    &-btn{
+      width: 18px;
+      height: 18px;
+      border: none;
+      background: none;
+      outline: none;
+      position: absolute;
+      z-index: 2;
+      top: 51px;
+      right: 62px;
+      cursor: pointer;
+    }
+  }
+  &__input{
+   width: 100%;
+    height: 120px;
+    border: none;
+    outline: none;
+    box-shadow: inset 0px -2px 0px rgba(223, 223, 223, 0.5);
+    border-radius: 4px 0px 0px 0px;
+    padding-left: 56px;
+    &::placeholder{
+      font-family:var(--sfPro);
+      font-size: 16px;
+      line-height: 19px;
+      color: #1C2E3D;
+
+    }
+  }
+  &__carousel{
+    width: 502px;
+    height: 120px;
+    background: #73AFBA;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &-title{
+      font-family: var(--sfPro);
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      letter-spacing: 2.18182px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+
+
+    }
+    .owl-carousel{
+      height: 280px;
+      position: absolute;
+      bottom: 120px;
+      left: 0;
+    }
+    .owl-item{
+      width: 100%;
+      height: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      &-title{
+        font-family: var(--sfPro);
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 2.18182px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        position: absolute;
+        bottom: 7px;
+
+      }
+      &__link{
+        position: relative;
+        z-index: 3;
+        transition: 0.3s;
+        &:hover{
+          transform: scale(1.2);
+          transition: 0.3s;
+        }
+      }
+    }
+    .owl-item-1{
+      background: url("../image/first-screen/2 1.png") center/cover no-repeat;
+    }
+    .owl-item-2{
+      background: url("../image/first-screen/ocean.jpg") center/cover no-repeat;
+    }
+    .owl-item-3{
+      background: url("../image/first-screen/unnamed.jpg") center/cover no-repeat;
+    }
+    .owl-carousel .owl-nav .owl-next{
+      position: absolute;
+      bottom: -80px;
+      right: 120px;
+    }    .owl-carousel .owl-nav .owl-prev{
+      position: absolute;
+      bottom: -80px;
+      left: 120px;
+    }
+  }
+
+}

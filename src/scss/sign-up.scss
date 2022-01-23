@@ -1,0 +1,77 @@
+.sign-up{
+  padding: 336px 0 178px;
+  background:  url("../image/sign-up/bg.png") center/cover no-repeat;
+  position: relative;
+  &__container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background-color: rgba(28, 46, 61, 0.46);
+    z-index: 1;
+  }
+  &__title{
+    font-family: var(--sfPro);
+    font-size: 64px;
+    line-height: 80px;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 40px;
+  }
+  &__subtitle{
+    font-family: var(--sfCompact);
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    width: 368px;
+    height: 84px;
+    position: relative;
+    z-index: 2;
+  }
+  &__form{
+    width: 501px;
+    height: 320px;
+    border-radius: 8px;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: -217px;
+
+    &-box{
+      width: 100%;
+      padding: 76px 72px 0;
+    }
+    &-input{
+      width: 100%;
+      height: 38px;
+      border: none;
+      margin-bottom: 30px;
+      outline: none;
+      border-bottom: 1px solid #1C2E3D30;
+      &::placeholder{
+        font-family: var(--sfPro);
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 2px;
+        color: #1C2E3D;
+        text-transform: uppercase;
+      }
+      &:focus, &:hover{
+        border-bottom: 1px solid #73AFBA;
+      }
+    }
+    &-btn{
+      @include bigButton(501px, 96px, #73AFBA);
+      border-radius: 0 0 8px 8px;
+    }
+  }
+}
